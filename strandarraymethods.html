@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            methods of string and array.
+        </title>
+    </head>
+    <body>
+        <h1>methods of strings</h1>
+        <font size="4" color="blue">charCodeAt()</font>
+        <p>
+            the charCodeAt() method returns the Unicode of the character at the specified index in a string.
+        </p>
+        <script>
+           var str =new String("helloworld");
+           console.log(str.charCodeAt(0));// returns unicode of 'h'
+        </script>
+        <font size="4" color="blue">concat()</font>
+        <p>
+            The concat() method is used to join two or more strings.
+            This method does not change the existing strings, but returns 
+            a new string containing the text of the joined strings.
+        </p>
+        <script>
+            var str1 = "Hello ";
+var str2 = "world!";
+var str3 = " Have a nice day!";
+var res = str1.concat(str2, str3);
+console.log(res);
+        </script>
+        <font size="4" color="blue">match()</font>
+        <p>
+            The match() method searches a string for a match against a regular 
+            expression, and returns the matches, as an Array object.
+        </p>
+        <script>
+            var str = "The rain in SPAIN stays mainly in the plain";
+            var res = str.match(/ain/g);
+            console.log(res);
+        </script>
+        <font size="4" color="blue">replace()</font>
+        <p>
+            The repeat() method returns a new string with a specified number of copies of the string it was called on.
+        </p>
+        <script>
+            var str = "Hello world!";
+            var x=str.repeat(2);
+            console.log(x);
+        </script>
+        <font size="4" color="blue">slice()</font>
+        <p>
+            The slice() method extracts parts of a string and returns the extracted parts in a new string.
+            Use the start and end parameters to specify the part of the string you want to extract.
+            The first character has the position 0, the second has position 1, and so on.
+        </p>
+        <script>
+            var str = "Hello world!";
+            var res = str.slice(0, 5);
+            console.log(res);
+        </script>
+        <font size="4" color="blue">substr()</font>
+        <p>
+            The substr() method extracts parts of a string, beginning at the character at the specified 
+            position, and returns the specified number of characters.
+        </p>
+        <script>
+            var str = "Hello world!";
+            var res = str.substr(1, 4);
+            console.log(res);
+        </script>
+        <font size="4" color="blue">toString()</font>
+        <p>
+            The toString() method returns the value of a String object.
+        </p>
+        <script>
+            var str = "Hello World!";
+            var res = str.toString();
+            console.log(res,typeof res)
+        </script>
+        <h1>methods of array</h1>
+        <font size="4" color="blue">copywithin()</font>
+        <p>
+            The copyWithin() method copies array elements to another position in the array, overwriting the existing values.
+            This method will never add more items to the array.
+        </p>
+        <script>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            var x=fruits.copyWithin(2, 0);
+            console.log(x)
+        </script>
+        <font size="4" color="blue">find()</font>
+        <p>
+            The find() method returns the value of the first element in an array that pass a test (provided as a function).
+                 The find() method executes the function once for each element present in the array:
+               If it finds an array element where the function returns a true value, 
+               find() returns the value of that array element (and does not check the remaining values)
+              Otherwise it returns undefined
+        </p>
+              <p><strong>Note:</strong> The find() method is not supported in IE 11 (and earlier versions).</p>
+                <script>
+                  var ages = [3, 10, 18, 20];
+
+                    function checkAdult(age) {
+                    return age >= 18;
+                      }
+                      var x= ages.find(checkAdult);
+                    console.log(x)
+                </script>
+        <font size="4" color="blue">isArray()</font>
+        <p>
+            The isArray() method determines whether an object is an array.
+            This function returns true if the object is an array, and false if not.
+        </p>
+        <p>Click the button to check if "fruits" is an array.</p>
+ 
+             <button onclick="myFunction()">Try it</button>
+
+             <p id="demo"></p>
+
+        <script>
+          function myFunction() {
+             var fruits = ["Banana", "Orange", "Apple", "Mango"];
+              var x = document.getElementById("demo");
+              x.innerHTML = Array.isArray(fruits);
+               }
+         </script>
+         <font size="4" color="blue">slice()</font>
+         <p>
+            The slice() method returns the selected elements in an array, as a new array object.
+            The slice() method selects the elements starting at the given start argument, and ends 
+            at, but does not include, the given end argument.
+         </p>
+         <script>
+             var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+             var citrus = fruits.slice(1, 3);
+             console.log(citrus)
+         </script>
+         <font size="4" color="blue">sort()</font>
+         <p>
+            The sort() method sorts the items of an array.
+
+            The sort order can be either alphabetic or numeric, and either ascending (up) or descending (down).
+            
+            By default, the sort() method sorts the values as strings in alphabetical and ascending order.
+         </p>
+         <script>
+             var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                 fruits.sort();
+                 console.log(fruits);
+         </script>
+         <font size="4" color="blue">valueof()</font>
+         <p>
+            The valueOf() method returns the array.
+
+            This method is the default method of the array object. Array.valueOf() will return the same as Array
+         </p>
+         <script>
+             var fruits = ["Banana", "Orange", "Apple", "Mango"];
+             var v = fruits.valueOf();
+             console.log(v);
+         </script>
+    </body>
+</html>
