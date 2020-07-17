@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>to log OS name and version on the cosole.</title>
+    </head>
+<body>
+    <script>
+        var str=prompt("enter your os name and version");
+        var res= str.indexOf(" ");
+        var os=str.slice(0,res);
+        var version=str.slice(res+1)
+        console.log('the OS name is ' + os + ' and version is ' + version);
+    </script>
+</body>
+</html>
